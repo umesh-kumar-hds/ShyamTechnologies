@@ -73,9 +73,17 @@ const ContactMapSection = () => {
 
                 <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" required />
-
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginTop: "4px",
+                  }}
+                >
+                  {" "}
+                  <label htmlFor="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
 
                 <button type="submit">Send Email</button>
               </form>

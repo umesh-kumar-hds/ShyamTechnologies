@@ -1,9 +1,14 @@
 /* CustomCarousel.module.css */
+.customCarousel {
+  height: 100vh;
+  position: relative;
+}
 .carouselBg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 100vh;
+  position: relative;
 }
 
 .customCaption {
