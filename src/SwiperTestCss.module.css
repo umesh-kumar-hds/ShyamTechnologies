@@ -1,0 +1,39 @@
+.testimonialsSection {
+  background-color: #f8f9fa; /* Light background */
+  padding: 3rem 1rem;
+}
+
+.lineBottom {
+  position: relative;
+  display: inline-block;
+}
+
+.lineBottom::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #007bff; /* Bootstrap primary color */
+}
+
+.blockquote {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.author {
+  margin-top: 1rem;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+}
+
+.position {
+  font-style: italic;
+  color: #999;
+}

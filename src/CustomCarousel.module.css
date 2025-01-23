@@ -1,0 +1,68 @@
+/* CustomCarousel.module.css */
+.carouselBg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.customCaption {
+  position: absolute;
+  top: 60%; /* Center vertically */
+  left: 40%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* color: white; */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: start;
+  z-index: 1;
+}
+
+.customCarouselControls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  cursor: pointer;
+  /* color: white; */
+}
+
+.customCarouselControls .carousel-control-prev {
+  left: 0px;
+}
+
+.customCarouselControls .carousel-control-next {
+  right: 0px;
+}
+
+.customCarouselControls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-item {
+  transition: transform 0s ease-in-out;
+  /*Reducetransitionduration*/
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0s ease-in-out;
+  -ms-transition: transform 0s ease-in-out;
+  -o-transition: transform 0s ease-in-out;
+  -webkit-transition: transform 0s ease-in-out;
+}
+
+.carouselBg {
+  background-color: black; /* Fallback color for smooth transition */
+}
+.carousel-item {
+  overflow: hidden; /* Prevent unexpected blank backgrounds */
+  height: 100%;
+}
+
+.carouselBg {
+  background-color: black; /* Ensure consistent background during transitions */
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/White Logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <!-- <link rel="stylesheet" href="./css/owl.carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./css/owl.theme.default.min.css"> -->
+  <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./fonts/icomoon/style.css">
+  <link rel="stylesheet" href="./fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="./css/aos.css">
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Owl Carousel CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+  <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <!-- <script src="./js/owl.carousel.min.js"></script> -->
+  <script src="./js/jquery.animateNumber.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/jquery.fancybox.min.js"></script>
+  <script src="./js/jquery.sticky.js"></script>
+  <script src="./js/aos.js"></script>
+  <!-- <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init();
+    });
+  </script>
+  <script defer src="./js/custom.js"></script>
+  <!-- <script>
+    const stickyNav = document.querySelector(".sticky-nav");
+    const enrollButton = document.querySelector(".btn-book");
+
+    function updateEnrollButtonMargin() {
+      if (stickyNav.classList.contains("js-sticky-header")) {
+        enrollButton.style.marginTop = "10px";
+        enrollButton.style.marginRight = "0px";
+      } else {
+        enrollButton.style.marginTop = "0";
+      }
+    }
+
+    updateEnrollButtonMargin();
+
+    const observer = new MutationObserver(() => {
+      updateEnrollButtonMargin();
+    });
+
+    // Observe the class attribute of the stickyNav element
+    observer.observe(stickyNav, { attributes: true, attributeFilter: ["class"] });
+  </script> -->
+  <!-- <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1, // Display one item at a time
+        loop: true, // Enable infinite loop
+        nav: true, // Show navigation
+        navText: [
+          "<span class='arrow-prev'>&#10094;</span>", // Custom left arrow (HTML entity)
+          "<span class='arrow-next'>&#10095;</span>", // Custom right arrow (HTML entity)
+        ],
+        dots: false, // Disable dots (optional)
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+      });
+    });
+
+  </script> -->
+  <!-- <style>
+    .btn-book {
+      transition: margin-top 3s ease;
+      /* Smooth animation */
+    }
+
+    .owl-nav button {
+      position: absolute;
+      top: 10%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .owl-nav .owl-prev {
+      left: 10px;
+    }
+
+    .owl-nav .owl-next {
+      right: 10px;
+    }
+  </style> -->
+  <!-- <style>
+    /* Hide default button backgrounds */
+
+    /* Arrow container */
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style> -->
+  <style>
+    /* Tooltip container */
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* Tooltip text */
+    .tooltip-container .tooltip-text {
+      visibility: hidden;
+      width: 200px;
+      /* Adjust as needed */
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 120%;
+      /* Position above the element */
+      left: 50%;
+      transform: translateX(-50%);
+      /* opacity: 0; */
+      transition: opacity 0.3s ease;
+    }
+
+    /* Tooltip arrow */
+    .tooltip-container .tooltip-text::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      /* Arrow at the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    /* Show tooltip on hover */
+    .tooltip-container:hover .tooltip-text {
+      visibility: visible;
+      color: white;
+      opacity: 1;
+    }
+  </style>
+
+  <title>Shyam Technologies</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+</body>
+
+</html>
