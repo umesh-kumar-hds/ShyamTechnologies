@@ -65,7 +65,7 @@ const BestCoursesSection = () => {
           </div>
           <div className="row">
             <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
+              className=" col-sm-12 col-md-6 col-lg-4"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -119,7 +119,7 @@ const BestCoursesSection = () => {
               </div>
             </div>
             <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
+              className=" col-sm-12 col-md-6 col-lg-4"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -173,7 +173,7 @@ const BestCoursesSection = () => {
               </div>
             </div>
             <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
+              className=" col-sm-6 col-md-6 col-lg-4"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -226,10 +226,7 @@ const BestCoursesSection = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
-              data-aos="fade-up"
-            >
+            <div className=" col-sm-6 col-md-6 col-lg-4" data-aos="fade-up">
               <div className="feature text-left">
                 <div className="twoButtons">
                   <i className="uil ">
@@ -280,7 +277,7 @@ const BestCoursesSection = () => {
               </div>
             </div>
             <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
+              className=" col-sm-6 col-md-6 col-lg-4"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -334,7 +331,7 @@ const BestCoursesSection = () => {
               </div>
             </div>
             <div
-              className="col-6 col-sm-6 col-md-6 col-lg-4"
+              className="col-sm-6 col-md-6 col-lg-4"
               data-aos="fade-up"
               data-aos-delay="300"
             >

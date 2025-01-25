@@ -51,8 +51,8 @@ const SlickTestimonialsSection = () => {
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="rounded-circle mb-3"
-                        style={{ width: "30%", marginLeft: "220px" }}
+                        className="rounded-circle mb-3 responsive-margin-test"
+                        style={{ width: "30%" }}
                       />
                       <h3>{testimonial.name}</h3>
                       <p className="text-muted">{testimonial.position}</p>

@@ -21,6 +21,12 @@ const Navbar = () => {
       textColor: isSticky ? "#001a33" : "#001a33",
       bgColor: "#136ad5",
     },
+    "/Sql": {
+      backgroundColor: isSticky ? "#fff" : "#fff",
+      textColorTopNav: isSticky ? "#001a33" : "#fff",
+      textColor: isSticky ? "#001a33" : "#001a33",
+      bgColor: "#136ad5",
+    },
     "/about": {
       backgroundColor: isSticky ? "#fff" : "#fff",
       textColorTopNav: isSticky ? "#001a33" : "#fff",

@@ -3,6 +3,100 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const PageContent = ({ prop }) => {
+  const [showPart1Topics, setShowPart1Topics] = useState(false);
+  const [showPart2Topics, setShowPart2Topics] = useState(false);
+  const [showPart3Topics, setShowPart3Topics] = useState(false);
+  const [showPart4Topics, setShowPart4Topics] = useState(false);
+  const [showPart5Topics, setShowPart5Topics] = useState(false);
+  const [showPart6Topics, setShowPart6Topics] = useState(false);
+  const [showPart7Topics, setShowPart7Topics] = useState(false);
+  const [showPart8Topics, setShowPart8Topics] = useState(false);
+  const [showPart9Topics, setShowPart9Topics] = useState(false);
+  const [showPart10Topics, setShowPart10Topics] = useState(false);
+  const [showPart11Topics, setShowPart11Topics] = useState(false);
+  const [showPart12Topics, setShowPart12Topics] = useState(false);
+  const [showPart13Topics, setShowPart13Topics] = useState(false);
+  const [showPart14Topics, setShowPart14Topics] = useState(false);
+  const [showPart15Topics, setShowPart15Topics] = useState(false);
+  const [showPart16Topics, setShowPart16Topics] = useState(false);
+  const [showPart17Topics, setShowPart17Topics] = useState(false);
+  const [showPart18Topics, setShowPart18Topics] = useState(false);
+  const [showPart19Topics, setShowPart19Topics] = useState(false);
+  const [showPart20Topics, setShowPart20Topics] = useState(false);
+  const [showPart21Topics, setShowPart21Topics] = useState(false);
+  const {
+    title,
+    part1,
+    topic1,
+    part2,
+    topic2,
+    part3,
+    topic3,
+    part4,
+    topic4,
+    part5,
+    topic5,
+    part6,
+    topic6,
+    part7,
+    topic7,
+    part8,
+    topic8,
+    part9,
+    topic9,
+    part10,
+    topic10,
+    part11,
+    topic11,
+    part12,
+    topic12,
+    part13,
+    topic13,
+    part14,
+    topic14,
+    part15,
+    topic15,
+    part16,
+    topic16,
+    part17,
+    topic17,
+    part18,
+    topic18,
+    part19,
+    topic19,
+    part20,
+    topic20,
+    part21,
+    topic21,
+  } = prop;
+
+  const dropdownStyles = {
+    container: {
+      overflow: "hidden",
+      transition: "max-height 0.8s ease-in-out",
+    },
+    hidden: {
+      maxHeight: "0",
+    },
+    visible: {
+      maxHeight: "500px", // Adjust as needed
+    },
+    list: {
+      margin: "0",
+      padding: "0",
+      listStyleType: "none",
+    },
+    listItem: {
+      padding: "5px 0",
+      borderBottom: "1px solid #ddd",
+      listStyleType: "none",
+    },
+    header: {
+      cursor: "pointer",
+      color: "blue",
+      margin: "10px 0",
+    },
+  };
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -47,20 +141,24 @@ const PageContent = ({ prop }) => {
   return (
     <div>
       <hr></hr>
-      <div style={{ marginTop: "150px" }}>
-        <div class="services-section">
+      <div style={{ marginTop: "105px" }}>
+        <div class="services-section" style={{ padding: "40px 0" }}>
           <div class="twoButtons">
-            <h2 style={{ marginLeft: "120px" }} class="line-bottom">
+            <h2 class="responsive-margin line-bottom ">
               {/* {`Data Science With AI & ML Course`} */}
-              {prop}
+              {title}
             </h2>
             <Link to="/" class=" btn btn-secondary ml-5 mr-1">
               All Courses
             </Link>
           </div>
           <div class="container">
-            <div class="row justify-content-between">
-              <div class="col-lg-12 mb-5 mb-lg-0">
+            <div class="row ">
+              <p data-aos="fade-up" data-aos-delay="100">
+                Unlock the power of {title} with this comprehensive course
+                designed for beginners and advanced learners alike.
+              </p>
+              <div class="col-lg-3 mb-5 mb-lg-0">
                 <div
                   class="section-title mb-3"
                   data-aos="fade-up"
@@ -69,19 +167,136 @@ const PageContent = ({ prop }) => {
                   {/* <!-- <h2 class="line-bottom mb-4">Become an Instructor</h2> --> */}
                 </div>
 
-                <p data-aos="fade-up" data-aos-delay="100">
-                  Unlock the power of {prop} with this comprehensive course
-                  designed for beginners and advanced learners alike.
-                </p>
-
                 <ul
-                  class="ul-check list-unstyled mb-5 primary"
+                  className=" list-unstyled  primary"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <b>Course Outline: {prop}</b>
+                  <b className="mb-4">Course Outline: {title}</b>
                   <br />
-                  <li>
+
+                  <div className="mt-4">
+                    <li
+                      class="ul-check list-unstyled"
+                      onClick={() => setShowPart1Topics(!showPart1Topics)}
+                      style={dropdownStyles.header}
+                    >
+                      {part1} {showPart1Topics ? "" : ""}
+                    </li>
+                    <div
+                      style={{
+                        ...dropdownStyles.container,
+                        ...(showPart1Topics
+                          ? dropdownStyles.visible
+                          : dropdownStyles.hidden),
+                      }}
+                    >
+                      <ul style={dropdownStyles.list}>
+                        {topic1.map((topic, index) => (
+                          <li key={index} style={dropdownStyles.listItem}>
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <li
+                      onClick={() => setShowPart2Topics(!showPart2Topics)}
+                      style={dropdownStyles.header}
+                    >
+                      {part2} {showPart2Topics ? "" : ""}
+                    </li>
+                    <div
+                      style={{
+                        ...dropdownStyles.container,
+                        ...(showPart2Topics
+                          ? dropdownStyles.visible
+                          : dropdownStyles.hidden),
+                      }}
+                    >
+                      <ul style={dropdownStyles.list}>
+                        {topic2.map((topic, index) => (
+                          <li key={index} style={dropdownStyles.listItem}>
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <li
+                      onClick={() => setShowPart3Topics(!showPart3Topics)}
+                      style={dropdownStyles.header}
+                    >
+                      {part3} {showPart3Topics ? "" : ""}
+                    </li>
+                    <div
+                      style={{
+                        ...dropdownStyles.container,
+                        ...(showPart3Topics
+                          ? dropdownStyles.visible
+                          : dropdownStyles.hidden),
+                      }}
+                    >
+                      <ul style={dropdownStyles.list}>
+                        {topic3.map((topic, index) => (
+                          <li key={index} style={dropdownStyles.listItem}>
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <li
+                      onClick={() => setShowPart4Topics(!showPart4Topics)}
+                      style={dropdownStyles.header}
+                    >
+                      {part4} {showPart4Topics ? "" : ""}
+                    </li>
+                    <div
+                      style={{
+                        ...dropdownStyles.container,
+                        ...(showPart4Topics
+                          ? dropdownStyles.visible
+                          : dropdownStyles.hidden),
+                      }}
+                    >
+                      <ul style={dropdownStyles.list}>
+                        {topic4.map((topic, index) => (
+                          <li key={index} style={dropdownStyles.listItem}>
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <li
+                      onClick={() => setShowPart5Topics(!showPart5Topics)}
+                      style={dropdownStyles.header}
+                    >
+                      {part5} {showPart5Topics ? "" : ""}
+                    </li>
+                    <div
+                      style={{
+                        ...dropdownStyles.container,
+                        ...(showPart5Topics
+                          ? dropdownStyles.visible
+                          : dropdownStyles.hidden),
+                      }}
+                    >
+                      <ul style={dropdownStyles.list}>
+                        {topic5.map((topic, index) => (
+                          <li key={index} style={dropdownStyles.listItem}>
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  {/* <li>
                     Module 1: Introduction to Data Science Overview of Data
                     Science: What data science is, its importance, and its
                     applications. Data Science Process: Data collection,
@@ -147,7 +362,7 @@ const PageContent = ({ prop }) => {
                     the concepts learned in a real-world problem, create a full
                     project from scratch (data collection, cleaning, modeling,
                     and deployment).
-                  </li>
+                  </li> */}
                 </ul>
 
                 <p data-aos="fade-up" data-aos-delay="300">
@@ -162,6 +377,687 @@ const PageContent = ({ prop }) => {
                     Enroll Now
                   </Link>
                 </p>
+              </div>
+              <div className="col-lg-3 mb-2 mb-lg-0 ">
+                <div
+                  class="section-title"
+                  data-aos="fade-up"
+                  data-aos-delay="0"
+                >
+                  {/* <!-- <h2 class="line-bottom mb-4">Become an Instructor</h2> --> */}
+                </div>{" "}
+                <p data-aos="fade-up" data-aos-delay="100"></p>
+                <ul
+                  class=" list-unstyled  primary"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <br />
+
+                  {part6 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart6Topics(!showPart6Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part6} {showPart6Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart6Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic6.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part7 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart7Topics(!showPart7Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part7} {showPart7Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart7Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic7.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {part8 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart8Topics(!showPart8Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part8} {showPart8Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart8Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic8.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {part9 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart9Topics(!showPart9Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part9} {showPart9Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart9Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic9.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {part10 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart10Topics(!showPart10Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part10} {showPart10Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart10Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic10.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {part11 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart11Topics(!showPart11Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part11} {showPart11Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart11Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic11.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {/* <li>
+                    Module 1: Introduction to Data Science Overview of Data
+                    Science: What data science is, its importance, and its
+                    applications. Data Science Process: Data collection,
+                    cleaning, visualization, analysis, and model-building.
+                    Python for Data Science: Basics of Python programming
+                    (libraries such as NumPy, Pandas, Matplotlib).
+                  </li>
+                  <li>
+                    Module 2: Data Wrangling and Preprocessing Data Cleaning:
+                    Handling missing values, duplicates, outliers, and data
+                    imputation. Data Transformation: Scaling, encoding
+                    categorical variables, feature engineering, normalization.
+                    Exploratory Data Analysis (EDA): Visualizing data using
+                    libraries like Seaborn and Matplotlib.
+                  </li>
+                  <li>
+                    Module 3: Introduction to Machine Learning What is Machine
+                    Learning?: Overview of ML, types of learning (supervised,
+                    unsupervised, reinforcement). Algorithms Overview: Linear
+                    regression, decision trees, support vector machines (SVM),
+                    k-nearest neighbors (KNN). Model Evaluation: Metrics like
+                    accuracy, precision, recall, F1-score, ROC-AUC.
+                  </li>
+                  <li>
+                    Module 4: Supervised Learning Algorithms Regression
+                    Algorithms: Linear regression, logistic regression.
+                    Classification Algorithms: Decision trees, random forests,
+                    SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
+                    Search and Random Search.
+                  </li>
+                  <li>
+                    Module 5: Unsupervised Learning Algorithms Clustering:
+                    K-means, hierarchical clustering, DBSCAN. Dimensionality
+                    Reduction: PCA (Principal Component Analysis), t-SNE for
+                    visualizing high-dimensional data. Association Rule
+                    Learning: Apriori, Eclat for market basket analysis.
+                  </li>
+                  <li>
+                    Module 6: Neural Networks & Deep Learning Introduction to
+                    Neural Networks: Basic architecture (input layer, hidden
+                    layers, output layer). Deep Learning Concepts: Convolutional
+                    Neural Networks (CNNs), Recurrent Neural Networks (RNNs),
+                    and how they work. Frameworks: Using TensorFlow and Keras
+                    for building deep learning models.
+                  </li>
+                  <li>
+                    Module 7: Artificial Intelligence and its Applications AI
+                    Fundamentals: Natural Language Processing (NLP), Computer
+                    Vision, Reinforcement Learning. AI in Real-World Problems:
+                    How AI is used in industries like healthcare, finance,
+                    marketing, etc. AI Ethics: Bias in AI models, fairness, and
+                    transparency.
+                  </li>
+                  <li>
+                    Module 8: Model Deployment and Production Model Deployment:
+                    Deploying machine learning models using Flask/Django,
+                    Docker, or cloud services like AWS, GCP, Azure. End-to-End
+                    Pipeline: Building a pipeline from data collection to
+                    real-time model predictions.
+                  </li>
+                  <li>
+                    Module 9: Capstone Project Practical Application: Apply all
+                    the concepts learned in a real-world problem, create a full
+                    project from scratch (data collection, cleaning, modeling,
+                    and deployment).
+                  </li> */}
+                </ul>
+              </div>
+              <div className="col-lg-3 mb-2 mb-lg-0 ">
+                <div
+                  class="section-title"
+                  data-aos="fade-up"
+                  data-aos-delay="0"
+                >
+                  {/* <!-- <h2 class="line-bottom mb-4">Become an Instructor</h2> --> */}
+                </div>{" "}
+                <p data-aos="fade-up" data-aos-delay="100"></p>
+                <ul
+                  class=" list-unstyled  primary"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <br />
+
+                  {part12 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart12Topics(!showPart12Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part12} {showPart12Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart12Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic12.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part13 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart13Topics(!showPart13Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part13} {showPart13Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart13Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic13.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part14 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart14Topics(!showPart14Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part14} {showPart14Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart14Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic14.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part15 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart15Topics(!showPart15Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part15} {showPart15Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart15Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic15.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part16 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart16Topics(!showPart16Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part16} {showPart16Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart16Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic16.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* <li>
+                    Module 1: Introduction to Data Science Overview of Data
+                    Science: What data science is, its importance, and its
+                    applications. Data Science Process: Data collection,
+                    cleaning, visualization, analysis, and model-building.
+                    Python for Data Science: Basics of Python programming
+                    (libraries such as NumPy, Pandas, Matplotlib).
+                  </li>
+                  <li>
+                    Module 2: Data Wrangling and Preprocessing Data Cleaning:
+                    Handling missing values, duplicates, outliers, and data
+                    imputation. Data Transformation: Scaling, encoding
+                    categorical variables, feature engineering, normalization.
+                    Exploratory Data Analysis (EDA): Visualizing data using
+                    libraries like Seaborn and Matplotlib.
+                  </li>
+                  <li>
+                    Module 3: Introduction to Machine Learning What is Machine
+                    Learning?: Overview of ML, types of learning (supervised,
+                    unsupervised, reinforcement). Algorithms Overview: Linear
+                    regression, decision trees, support vector machines (SVM),
+                    k-nearest neighbors (KNN). Model Evaluation: Metrics like
+                    accuracy, precision, recall, F1-score, ROC-AUC.
+                  </li>
+                  <li>
+                    Module 4: Supervised Learning Algorithms Regression
+                    Algorithms: Linear regression, logistic regression.
+                    Classification Algorithms: Decision trees, random forests,
+                    SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
+                    Search and Random Search.
+                  </li>
+                  <li>
+                    Module 5: Unsupervised Learning Algorithms Clustering:
+                    K-means, hierarchical clustering, DBSCAN. Dimensionality
+                    Reduction: PCA (Principal Component Analysis), t-SNE for
+                    visualizing high-dimensional data. Association Rule
+                    Learning: Apriori, Eclat for market basket analysis.
+                  </li>
+                  <li>
+                    Module 6: Neural Networks & Deep Learning Introduction to
+                    Neural Networks: Basic architecture (input layer, hidden
+                    layers, output layer). Deep Learning Concepts: Convolutional
+                    Neural Networks (CNNs), Recurrent Neural Networks (RNNs),
+                    and how they work. Frameworks: Using TensorFlow and Keras
+                    for building deep learning models.
+                  </li>
+                  <li>
+                    Module 7: Artificial Intelligence and its Applications AI
+                    Fundamentals: Natural Language Processing (NLP), Computer
+                    Vision, Reinforcement Learning. AI in Real-World Problems:
+                    How AI is used in industries like healthcare, finance,
+                    marketing, etc. AI Ethics: Bias in AI models, fairness, and
+                    transparency.
+                  </li>
+                  <li>
+                    Module 8: Model Deployment and Production Model Deployment:
+                    Deploying machine learning models using Flask/Django,
+                    Docker, or cloud services like AWS, GCP, Azure. End-to-End
+                    Pipeline: Building a pipeline from data collection to
+                    real-time model predictions.
+                  </li>
+                  <li>
+                    Module 9: Capstone Project Practical Application: Apply all
+                    the concepts learned in a real-world problem, create a full
+                    project from scratch (data collection, cleaning, modeling,
+                    and deployment).
+                  </li> */}
+                </ul>
+              </div>
+              <div className="col-lg-3 mb-2 mb-lg-0 ">
+                <div
+                  class="section-title"
+                  data-aos="fade-up"
+                  data-aos-delay="0"
+                >
+                  {/* <!-- <h2 class="line-bottom mb-4">Become an Instructor</h2> --> */}
+                </div>{" "}
+                <p data-aos="fade-up" data-aos-delay="100"></p>
+                <ul
+                  class=" list-unstyled  primary"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <br />
+
+                  {part17 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart17Topics(!showPart17Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part17} {showPart17Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart17Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic17.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part18 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart18Topics(!showPart18Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part18} {showPart18Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart18Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic18.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part19 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart19Topics(!showPart19Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part19} {showPart19Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart19Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic19.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part20 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart20Topics(!showPart20Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part20} {showPart20Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart20Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic20.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+
+                  {part21 && (
+                    <div>
+                      <li
+                        onClick={() => setShowPart21Topics(!showPart21Topics)}
+                        style={dropdownStyles.header}
+                      >
+                        {part21} {showPart21Topics ? "" : ""}
+                      </li>
+                      <div
+                        style={{
+                          ...dropdownStyles.container,
+                          ...(showPart21Topics
+                            ? dropdownStyles.visible
+                            : dropdownStyles.hidden),
+                        }}
+                      >
+                        <ul style={dropdownStyles.list}>
+                          {topic21.map((topic, index) => (
+                            <li key={index} style={dropdownStyles.listItem}>
+                              {topic}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  {/* <li>
+                    Module 1: Introduction to Data Science Overview of Data
+                    Science: What data science is, its importance, and its
+                    applications. Data Science Process: Data collection,
+                    cleaning, visualization, analysis, and model-building.
+                    Python for Data Science: Basics of Python programming
+                    (libraries such as NumPy, Pandas, Matplotlib).
+                  </li>
+                  <li>
+                    Module 2: Data Wrangling and Preprocessing Data Cleaning:
+                    Handling missing values, duplicates, outliers, and data
+                    imputation. Data Transformation: Scaling, encoding
+                    categorical variables, feature engineering, normalization.
+                    Exploratory Data Analysis (EDA): Visualizing data using
+                    libraries like Seaborn and Matplotlib.
+                  </li>
+                  <li>
+                    Module 3: Introduction to Machine Learning What is Machine
+                    Learning?: Overview of ML, types of learning (supervised,
+                    unsupervised, reinforcement). Algorithms Overview: Linear
+                    regression, decision trees, support vector machines (SVM),
+                    k-nearest neighbors (KNN). Model Evaluation: Metrics like
+                    accuracy, precision, recall, F1-score, ROC-AUC.
+                  </li>
+                  <li>
+                    Module 4: Supervised Learning Algorithms Regression
+                    Algorithms: Linear regression, logistic regression.
+                    Classification Algorithms: Decision trees, random forests,
+                    SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
+                    Search and Random Search.
+                  </li>
+                  <li>
+                    Module 5: Unsupervised Learning Algorithms Clustering:
+                    K-means, hierarchical clustering, DBSCAN. Dimensionality
+                    Reduction: PCA (Principal Component Analysis), t-SNE for
+                    visualizing high-dimensional data. Association Rule
+                    Learning: Apriori, Eclat for market basket analysis.
+                  </li>
+                  <li>
+                    Module 6: Neural Networks & Deep Learning Introduction to
+                    Neural Networks: Basic architecture (input layer, hidden
+                    layers, output layer). Deep Learning Concepts: Convolutional
+                    Neural Networks (CNNs), Recurrent Neural Networks (RNNs),
+                    and how they work. Frameworks: Using TensorFlow and Keras
+                    for building deep learning models.
+                  </li>
+                  <li>
+                    Module 7: Artificial Intelligence and its Applications AI
+                    Fundamentals: Natural Language Processing (NLP), Computer
+                    Vision, Reinforcement Learning. AI in Real-World Problems:
+                    How AI is used in industries like healthcare, finance,
+                    marketing, etc. AI Ethics: Bias in AI models, fairness, and
+                    transparency.
+                  </li>
+                  <li>
+                    Module 8: Model Deployment and Production Model Deployment:
+                    Deploying machine learning models using Flask/Django,
+                    Docker, or cloud services like AWS, GCP, Azure. End-to-End
+                    Pipeline: Building a pipeline from data collection to
+                    real-time model predictions.
+                  </li>
+                  <li>
+                    Module 9: Capstone Project Practical Application: Apply all
+                    the concepts learned in a real-world problem, create a full
+                    project from scratch (data collection, cleaning, modeling,
+                    and deployment).
+                  </li> */}
+                </ul>
               </div>
               {/* <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
             <figure class="img-wrap-2">

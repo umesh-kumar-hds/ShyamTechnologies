@@ -325,7 +325,7 @@ const OurCoursesSection = () => {
               data-aos-delay="0"
             >
               <Link
-                to="Sap"
+                to="/Sap"
                 className="category d-flex align-items-start h-100 tooltip-container"
               >
                 <div>
@@ -353,7 +353,7 @@ const OurCoursesSection = () => {
               data-aos-delay="0"
             >
               <Link
-                to="Tableau"
+                to="/Tableau"
                 className="category d-flex align-items-start h-100 tooltip-container"
               >
                 <div>
@@ -370,6 +370,33 @@ const OurCoursesSection = () => {
                   <h3>Tableau</h3>
                   <span className="tooltip-text">
                     Learn the basics and advanced concepts of Tableau.
+                  </span>
+                </div>
+              </Link>
+            </div>
+            <div
+              className="col-sm-6 col-md-6 col-lg-3 mb-4"
+              data-aos="fade-up"
+              data-aos-delay="0"
+            >
+              <Link
+                to="/Sql"
+                className="category d-flex align-items-start h-100 tooltip-container"
+              >
+                <div>
+                  <i className="uil">
+                    {" "}
+                    <img
+                      alt=""
+                      src="images/sql-server (1).png"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                  </i>
+                </div>
+                <div>
+                  <h3>SQL</h3>
+                  <span className="tooltip-text">
+                    Learn the basics and advanced concepts of SQL.
                   </span>
                 </div>
               </Link>

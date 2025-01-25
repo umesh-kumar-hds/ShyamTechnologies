@@ -1,3 +1,27 @@
 /* Slick Carousel Styles */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+.responsive-margin {
+  margin-left: 35px;
+}
+
+.responsive-margin-test {
+  margin-left: 100px;
+}
+@media (min-width: 1024px) {
+  .responsive-margin {
+    margin-left: 120px;
+  }
+  .responsive-margin-test {
+    margin-left: 220px;
+  }
+}
+.site-mobile-menu-body a {
+  color: black; /* Set link color to black */
+  text-decoration: none; /* Optional: Remove underline */
+}
+
+.site-mobile-menu-body a:hover {
+  color: gray; /* Optional: Add hover effect */
+}
