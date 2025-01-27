@@ -142,25 +142,25 @@ const PageContent = ({ prop }) => {
     <div>
       <hr></hr>
       <div style={{ marginTop: "105px" }}>
-        <div class="services-section" style={{ padding: "40px 0" }}>
-          <div class="twoButtons">
-            <h2 class="responsive-margin line-bottom ">
+        <div className="services-section" style={{ padding: "40px 0" }}>
+          <div className="twoButtons">
+            <h2 className="responsive-margin line-bottom ">
               {/* {`Data Science With AI & ML Course`} */}
               {title}
             </h2>
-            <Link to="/" class=" btn btn-secondary ml-5 mr-1">
+            <Link to="/" className=" btn btn-secondary ml-5 mr-1">
               All Courses
             </Link>
           </div>
-          <div class="container">
-            <div class="row ">
+          <div className="container">
+            <div className="row ">
               <p data-aos="fade-up" data-aos-delay="100">
                 Unlock the power of {title} with this comprehensive course
                 designed for beginners and advanced learners alike.
               </p>
-              <div class="col-lg-3 mb-5 mb-lg-0">
+              <div className="col-lg-3 mb-5 mb-lg-0">
                 <div
-                  class="section-title mb-3"
+                  className="section-title mb-3"
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
@@ -177,7 +177,7 @@ const PageContent = ({ prop }) => {
 
                   <div className="mt-4">
                     <li
-                      class="ul-check list-unstyled"
+                      className="ul-check list-unstyled"
                       onClick={() => setShowPart1Topics(!showPart1Topics)}
                       style={dropdownStyles.header}
                     >
@@ -323,7 +323,7 @@ const PageContent = ({ prop }) => {
                   <li>
                     Module 4: Supervised Learning Algorithms Regression
                     Algorithms: Linear regression, logistic regression.
-                    Classification Algorithms: Decision trees, random forests,
+                    classification Algorithms: Decision trees, random forests,
                     SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
                     Search and Random Search.
                   </li>
@@ -380,7 +380,7 @@ const PageContent = ({ prop }) => {
               </div>
               <div className="col-lg-3 mb-2 mb-lg-0 ">
                 <div
-                  class="section-title"
+                  className="section-title"
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
@@ -388,7 +388,7 @@ const PageContent = ({ prop }) => {
                 </div>{" "}
                 <p data-aos="fade-up" data-aos-delay="100"></p>
                 <ul
-                  class=" list-unstyled  primary"
+                  className=" list-unstyled  primary"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
@@ -578,7 +578,7 @@ const PageContent = ({ prop }) => {
                   <li>
                     Module 4: Supervised Learning Algorithms Regression
                     Algorithms: Linear regression, logistic regression.
-                    Classification Algorithms: Decision trees, random forests,
+                    classification Algorithms: Decision trees, random forests,
                     SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
                     Search and Random Search.
                   </li>
@@ -622,7 +622,7 @@ const PageContent = ({ prop }) => {
               </div>
               <div className="col-lg-3 mb-2 mb-lg-0 ">
                 <div
-                  class="section-title"
+                  className="section-title"
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
@@ -630,7 +630,7 @@ const PageContent = ({ prop }) => {
                 </div>{" "}
                 <p data-aos="fade-up" data-aos-delay="100"></p>
                 <ul
-                  class=" list-unstyled  primary"
+                  className=" list-unstyled  primary"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
@@ -798,7 +798,7 @@ const PageContent = ({ prop }) => {
                   <li>
                     Module 4: Supervised Learning Algorithms Regression
                     Algorithms: Linear regression, logistic regression.
-                    Classification Algorithms: Decision trees, random forests,
+                    classification Algorithms: Decision trees, random forests,
                     SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
                     Search and Random Search.
                   </li>
@@ -842,7 +842,7 @@ const PageContent = ({ prop }) => {
               </div>
               <div className="col-lg-3 mb-2 mb-lg-0 ">
                 <div
-                  class="section-title"
+                  className="section-title"
                   data-aos="fade-up"
                   data-aos-delay="0"
                 >
@@ -850,7 +850,7 @@ const PageContent = ({ prop }) => {
                 </div>{" "}
                 <p data-aos="fade-up" data-aos-delay="100"></p>
                 <ul
-                  class=" list-unstyled  primary"
+                  className=" list-unstyled  primary"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
@@ -1017,7 +1017,7 @@ const PageContent = ({ prop }) => {
                   <li>
                     Module 4: Supervised Learning Algorithms Regression
                     Algorithms: Linear regression, logistic regression.
-                    Classification Algorithms: Decision trees, random forests,
+                    classification Algorithms: Decision trees, random forests,
                     SVM, k-NN. Model Tuning: Hyperparameter tuning with Grid
                     Search and Random Search.
                   </li>
