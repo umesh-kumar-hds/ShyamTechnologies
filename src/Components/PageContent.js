@@ -372,19 +372,6 @@ const PageContent = ({ prop }) => {
                     and deployment).
                   </li> */}
                 </ul>
-
-                <p data-aos="fade-up" data-aos-delay="300">
-                  <Link
-                    to="/"
-                    className="btn btn-secondary"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setShowModal(true); // Open the modal when link is clicked
-                    }}
-                  >
-                    Enroll Now
-                  </Link>
-                </p>
               </div>
               <div className="col-lg-3 mb-2 mb-lg-0 ">
                 <div
@@ -1067,6 +1054,18 @@ const PageContent = ({ prop }) => {
                   </li> */}
                 </ul>
               </div>
+              <p data-aos="fade-up" data-aos-delay="300">
+                <Link
+                  to="/"
+                  className="btn btn-secondary"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setShowModal(true); // Open the modal when link is clicked
+                  }}
+                >
+                  Enroll Now
+                </Link>
+              </p>
               {/* <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
             <figure class="img-wrap-2">
               <img src="images/ammai.png" alt="Image" class="img-fluid">

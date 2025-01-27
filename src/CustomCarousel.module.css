@@ -71,3 +71,15 @@
 .carouselBg {
   background-color: black; /* Ensure consistent background during transitions */
 }
+
+@media (max-width: 768px) {
+  .customCaption h2 {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .customCaption h2 {
+    font-size: 1.2rem; /* Even smaller font size on smaller screens */
+  }
+}

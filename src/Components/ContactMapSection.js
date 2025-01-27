@@ -1,6 +1,55 @@
-import React, { useEffect } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const ContactMapSection = () => {
+  // const [showModal, setShowModal] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState("");
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    setIsSubmitting(true);
+    setSubmissionStatus("");
+
+    try {
+      // Send the form data as a form-encoded POST request
+      const response = await axios.post(
+        "https://shyamtechnologies.in/sendEmail.php", // Replace with the actual path to your PHP file
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json", // Use JSON format for the PHP backend
+          },
+        }
+      );
+
+      // Check the PHP script's response
+      if (response.data.status === "success") {
+        setSubmissionStatus("Form submitted successfully!");
+        // setShowModal(false); // Close modal on success
+      } else {
+        setSubmissionStatus(response.data.message || "Error submitting form.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setSubmissionStatus("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   useEffect(() => {}, []);
   return (
     <div>
@@ -67,12 +116,27 @@ const ContactMapSection = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <form action="send_email.php" method="post">
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
 
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+
                 <div
                   style={{
                     display: "flex",
@@ -80,12 +144,21 @@ const ContactMapSection = () => {
                     marginTop: "4px",
                   }}
                 >
-                  {" "}
                   <label htmlFor="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
 
-                <button type="submit">Send Email</button>
+                <button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Email"}
+                </button>
+
+                {submissionStatus && <p>{submissionStatus}</p>}
               </form>
             </div>
             <div

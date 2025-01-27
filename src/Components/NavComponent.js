@@ -179,29 +179,37 @@ const Navbar = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission behavior
     setIsSubmitting(true);
     setSubmissionStatus("");
 
     try {
-      // Replace with your backend URL
+      // Send the form data as a form-encoded POST request
       const response = await axios.post(
-        "https://your-backend-url.com/api/submit-form",
-        formData
+        "https://shyamtechnologies.in/sendEmail.php", // Replace with the actual path to your PHP file
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json", // Use JSON format for the PHP backend
+          },
+        }
       );
 
-      if (response.status === 200) {
+      // Check the PHP script's response
+      if (response.data.status === "success") {
         setSubmissionStatus("Form submitted successfully!");
         setShowModal(false); // Close modal on success
       } else {
-        setSubmissionStatus("Error submitting form. Try again.");
+        setSubmissionStatus(response.data.message || "Error submitting form.");
       }
     } catch (error) {
       console.error("Error:", error);
       setSubmissionStatus("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
   };
+
   return (
     <nav
       className={`site-nav mb-5`}

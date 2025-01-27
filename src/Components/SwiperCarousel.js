@@ -55,46 +55,49 @@ const CustomBootstrapCarousel = () => {
     );
   }
   return (
-    <Carousel
-      fade
-      interval={5000}
-      controls={true}
-      indicators={true}
-      className={styles.customCarousel}
-    >
-      {slides.map((slide, index) => (
-        <Carousel.Item key={index} style={{ height: "100vh" }}>
-          <div
-            className={styles.carouselBg}
-            style={{
-              backgroundImage: `url(${slide.image})`,
-            }}
-          >
-            <Carousel.Caption className={styles.customCaption}>
-              <h2>{slide.text}</h2>
-            </Carousel.Caption>
-          </div>
-        </Carousel.Item>
-      ))}
+    <div className="container-fluid p-0">
+      {" "}
+      <Carousel
+        fade
+        interval={5000}
+        controls={true}
+        indicators={true}
+        className={styles.customCarousel}
+      >
+        {slides.map((slide, index) => (
+          <Carousel.Item key={index} style={{ height: "100vh" }}>
+            <div
+              className={styles.carouselBg}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+              }}
+            >
+              <Carousel.Caption className={styles.customCaption}>
+                <h2>{slide.text}</h2>
+              </Carousel.Caption>
+            </div>
+          </Carousel.Item>
+        ))}
 
-      {/* Custom buttons can also be styled */}
-      {/* <div className={styles.customCarouselControls}>
-        <button
-          className="carousel-control-prev"
-          data-bs-target=".custom-carousel"
-          data-bs-slide="prev"
-        >
-          Prev
-        </button>
-        <button
-          className="carousel-control-next"
-          data-bs-target=".custom-carousel"
-          data-bs-slide="next"
-        >
-          Next
-        </button>
-      </div> */}
-    </Carousel>
+        {/* Custom buttons can also be styled */}
+        {/* <div className={styles.customCarouselControls}>
+      <button
+        className="carousel-control-prev"
+        data-bs-target=".custom-carousel"
+        data-bs-slide="prev"
+      >
+        Prev
+      </button>
+      <button
+        className="carousel-control-next"
+        data-bs-target=".custom-carousel"
+        data-bs-slide="next"
+      >
+        Next
+      </button>
+    </div> */}
+      </Carousel>
+    </div>
   );
 };
 
