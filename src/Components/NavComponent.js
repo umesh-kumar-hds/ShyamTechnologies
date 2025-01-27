@@ -198,7 +198,9 @@ const Navbar = () => {
       // Check the PHP script's response
       if (response.data.status === "success") {
         setSubmissionStatus("Form submitted successfully!");
-        setShowModal(false); // Close modal on success
+        setTimeout(() => {
+          setShowModal(false);
+        }, 2000);
       } else {
         setSubmissionStatus(response.data.message || "Error submitting form.");
       }
