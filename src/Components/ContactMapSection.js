@@ -112,7 +112,7 @@ const ContactMapSection = () => {
             </div>
 
             <div
-              className="col-lg-3 mr-auto order-1"
+              className="col-lg-4 mb-5 order-1 mb-lg-0"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -162,14 +162,14 @@ const ContactMapSection = () => {
               </form>
             </div>
             <div
-              className="col-lg-5 mr-auto order-2"
+              className="col-lg-4 mb-5 order-1 mb-lg-0"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <iframe
                 title="shyamMap"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.482498418729!2d78.44490909999999!3d17.436605599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91649637696b%3A0xd39ef5ef9a40fa80!2sShyam%20Technologies!5e0!3m2!1sen!2sin!4v1736447469454!5m2!1sen!2sin"
-                width="450"
+                width="350"
                 height="350"
                 style={{ border: "0" }}
                 allowFullScreen=""
