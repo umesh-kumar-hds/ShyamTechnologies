@@ -59,19 +59,29 @@ const FooterSection = () => {
                 <h3>Links</h3>
                 <ul className="list-unstyled float-left links">
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/about">About Us</Link>
+                    <Link to="/about" style={{ textDecoration: "none" }}>
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      Contact
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog" style={{ textDecoration: "none" }}>
+                      Blog
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/gallery">Gallery</Link>
+                    <Link to="/gallery" style={{ textDecoration: "none" }}>
+                      Gallery
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -150,13 +160,26 @@ const FooterSection = () => {
                 </address>
                 <ul className="list-unstyled links mb-4">
                   <li>
-                    <a href="tel://9346593339">9346593339</a>
+                    <a
+                      href="tel://9346593339"
+                      style={{ textDecoration: "none" }}
+                    >
+                      9346593339
+                    </a>
                   </li>
                   <li>
-                    <a href="tel://8142652799">8142652799</a>
+                    <a
+                      href="tel://8142652799"
+                      style={{ textDecoration: "none" }}
+                    >
+                      8142652799
+                    </a>
                   </li>
                   <li>
-                    <a href="mailto:shyamtechnologieshyd@gmail.com">
+                    <a
+                      href="mailto:shyamtechnologieshyd@gmail.com"
+                      style={{ textDecoration: "none" }}
+                    >
                       shyamtechnologieshyd@gmail.com
                     </a>
                   </li>
@@ -171,7 +194,9 @@ const FooterSection = () => {
                 Copyright &copy;
                 <script>document.write(new Date().getFullYear());</script>. All
                 Rights Reserved. &mdash; Designed with love by{" "}
-                <Link to="/">HeadWay Data Systems</Link>
+                <Link to="/" style={{ textDecoration: "none" }}>
+                  HeadWay Data Systems
+                </Link>
                 <Link to="/"></Link>
               </p>
             </div>

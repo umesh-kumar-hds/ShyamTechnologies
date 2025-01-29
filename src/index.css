@@ -17,11 +17,3 @@
     margin-left: 220px;
   }
 }
-.site-mobile-menu-body a {
-  color: black; /* Set link color to black */
-  text-decoration: none; /* Optional: Remove underline */
-}
-
-.site-mobile-menu-body a:hover {
-  color: gray; /* Optional: Add hover effect */
-}

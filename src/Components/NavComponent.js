@@ -228,23 +228,24 @@ const Navbar = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-6 col-lg-9">
-                <Link
+                <Link 
                   href="#"
                   className="small mr-3"
                   style={{
                     color: textColorTopNav,
                     backgroundColor: bgColor,
+                    textDecoration:'none'
                   }}
                 >
                   <span className="icon-question-circle-o mr-2"></span>
-                  <span className="d-none d-lg-inline-block text-none">
+                  <span className="d-none d-lg-inline-block text-none"> 
                     Have a questions?
                   </span>
                 </Link>
                 <Link
                   href="#"
                   className="small mr-3"
-                  style={{ color: textColorTopNav }}
+                  style={{ color: textColorTopNav ,textDecoration:'none'}}
                 >
                   {/* <span> </span> */}
                   {/* <FaHouse></FaHouse> */}
@@ -256,7 +257,7 @@ const Navbar = () => {
                 <Link
                   href="#"
                   className="small mr-3"
-                  style={{ color: textColorTopNav }}
+                  style={{ color: textColorTopNav,textDecoration:"none" }}
                 >
                   <span className="icon-envelope mr-2"></span>
                   <span className="d-none d-lg-inline-block">

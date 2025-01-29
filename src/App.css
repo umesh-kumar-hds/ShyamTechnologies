@@ -18,11 +18,3 @@ body {
 .carousel-fade .carousel-item.active {
   opacity: 1;
 }
-.site-mobile-menu-body a {
-  color: black; /* Set link color to black */
-  text-decoration: none; /* Optional: Remove underline */
-}
-
-.site-mobile-menu-body a:hover {
-  color: gray; /* Optional: Add hover effect */
-}
