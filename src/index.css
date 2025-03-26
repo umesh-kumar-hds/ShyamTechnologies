@@ -17,3 +17,40 @@
     margin-left: 220px;
   }
 }
+@media (min-width: 720px) {
+  .responsive-margin {
+    margin-left: 120px;
+  }
+  .responsive-margin-test {
+    margin-left: 220px;
+  }
+}
+@media (min-width: 480px) {
+  .responsive-margin {
+    margin-left: 120px;
+  }
+  .responsive-margin-test {
+    margin-left: 220px;
+  }
+}
+.mapStyles {
+  height: 350px;
+  width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .mapStyles {
+    height: 550px;
+    width: 550px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mapStyles {
+    height: 270px;
+    width: 270px;
+  }
+}
+/* @font-face {
+  font-family: "CustomFont";
+  src: url("../public/fonts/flaticon/font/Flaticon.woff2") format("woff2");
+  font-display: swap;
+} */

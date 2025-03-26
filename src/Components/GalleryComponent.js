@@ -1,9 +1,21 @@
 import React from "react";
+import { Helmet } from "react-helmet-async"; // Import Helmet
 
 const GalleryComponent = () => {
   return (
     <div>
       <div className="untree_co-section" style={{ marginTop: "30px" }}>
+        <Helmet>
+          <title>Explore Our Gallery </title>
+          <meta
+            name="description"
+            content="Discover insights in AI, Machine Learning, and Data Science with our interactive carousel."
+          />
+          <meta
+            name="keywords"
+            content="AI, Machine Learning, Data Science, Predictive Analytics, Artificial Intelligence"
+          />
+        </Helmet>
         <hr></hr>
         <h1
           style={{

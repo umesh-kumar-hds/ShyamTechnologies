@@ -1,40 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MobileMenu = () => {
+const MobileMenu = ({ isOpen, toggleMenu }) => {
   return (
-    <div>
-      <div className="site-mobile-menu">
-        <div className="site-mobile-menu-header">
-          <div className="site-mobile-menu-close">
-            <span className="icofont-close js-menu-toggle"></span>
-          </div>
+    <div className={`site-mobile-menu ${isOpen ? "offcanvas-menu" : ""}`}>
+      <div className="site-mobile-menu-header">
+        <div className="site-mobile-menu-close" onClick={toggleMenu}>
+          <span></span>
         </div>
-        <div className="site-mobile-menu-body">
-          {/* <ul className="js-clone-nav d-none d-lg-inline-block site-menu">
-            {["Home", "Our Courses", "Blog", "Gallery", "About", "Contact"].map(
-              (item, index) => (
-                <li
-                  key={index}
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "12px",
-                  }}
+      </div>
+      <div className="site-mobile-menu-body">
+        <ul className="site-nav-wrap">
+          {["Home", "Our Courses", "Blog", "Gallery", "About", "Contact"].map(
+            (item, index) => (
+              <li key={index}>
+                <Link
+                  to={
+                    item === "Home"
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/\s+/g, "-")}`
+                  }
+                  onClick={toggleMenu}
                 >
-                  <Link
-                    to={
-                      item === "Home"
-                        ? "/"
-                        : `/${item.toLowerCase().replace(/\s+/g, "-")}`
-                    }
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
-          </ul> */}
-        </div>
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
       </div>
     </div>
   );

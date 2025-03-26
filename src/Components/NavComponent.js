@@ -3,11 +3,18 @@ import defaultLogo from "../main.png"; // Replace with your default logo path
 import stickyLogo from "../White Logo.png"; // Replace with your sticky logo path
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import MobileMenu from "./MobileMenu"; // Import the MobileMenu component
 import {} from "react-icons/fa6";
 
 const Navbar = () => {
   const location = useLocation();
   const [isSticky, setIsSticky] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
   const pageStyles = {
     "/": {
       backgroundColor: isSticky ? "#fff" : "transparent",
@@ -33,13 +40,13 @@ const Navbar = () => {
       textColor: isSticky ? "#001a33" : "#001a33",
       bgColor: "#136ad5",
     },
-    "/python-course": {
+    "/python-training-in-hyderabad": {
       backgroundColor: isSticky ? "#fff" : "#fff",
       textColorTopNav: isSticky ? "#001a33" : "#fff",
       textColor: isSticky ? "#001a33" : "#001a33",
       bgColor: "#136ad5",
     },
-    "/DataScience": {
+    "/DATASCIENCE-AI-ML-TRAINING-IN-HYDERABAD": {
       backgroundColor: isSticky ? "#fff" : "#fff",
       textColorTopNav: isSticky ? "#001a33" : "#fff",
       textColor: isSticky ? "#001a33" : "#001a33",
@@ -99,7 +106,7 @@ const Navbar = () => {
       textColor: isSticky ? "#001a33" : "#001a33",
       bgColor: "#136ad5",
     },
-    "/DataAnalytics": {
+    "/DataAnalytics-training-in-hyderabad": {
       backgroundColor: isSticky ? "#fff" : "#fff",
       textColorTopNav: isSticky ? "#001a33" : "#fff",
       textColor: isSticky ? "#001a33" : "#001a33",
@@ -131,6 +138,7 @@ const Navbar = () => {
       bgColor: "#136ad5",
     },
   };
+
   const { backgroundColor, textColor, bgColor, textColorTopNav } = pageStyles[
     location.pathname
   ] || {
@@ -139,6 +147,7 @@ const Navbar = () => {
     bgColor: "#fff",
     textColorTopNav: "#001a33",
   };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -154,6 +163,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const getLogo = () => {
     if (location.pathname === "/" || location.pathname === "/home") {
       return isSticky ? stickyLogo : defaultLogo;
@@ -170,6 +180,7 @@ const Navbar = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -228,38 +239,36 @@ const Navbar = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-6 col-lg-9">
-                <Link 
+                <Link
                   href="#"
                   className="small mr-3"
                   style={{
                     color: textColorTopNav,
                     backgroundColor: bgColor,
-                    textDecoration:'none'
+                    textDecoration: "none",
                   }}
                 >
-                  <span className="icon-question-circle-o mr-2"></span>
-                  <span className="d-none d-lg-inline-block text-none"> 
+                  <span className="bi bi-question-circle mr-2"></span>
+                  <span className="d-none d-lg-inline-block text-none">
                     Have a questions?
                   </span>
                 </Link>
                 <Link
                   href="#"
                   className="small mr-3"
-                  style={{ color: textColorTopNav ,textDecoration:'none'}}
+                  style={{ color: textColorTopNav, textDecoration: "none" }}
                 >
-                  {/* <span> </span> */}
-                  {/* <FaHouse></FaHouse> */}
-                  <span className="icon-phone mr-2"></span>
+                  <span className="bi bi-telephone-fill mr-2"></span>
                   <span className="d-none d-lg-inline-block">
-                    +91 9346593339 / +91 8142652799
+                    +91 9346593339 / +91 8978493733
                   </span>
                 </Link>
                 <Link
                   href="#"
                   className="small mr-3"
-                  style={{ color: textColorTopNav,textDecoration:"none" }}
+                  style={{ color: textColorTopNav, textDecoration: "none" }}
                 >
-                  <span className="icon-envelope mr-2"></span>
+                  <span className="bi bi-envelope-fill mr-2"></span>
                   <span className="d-none d-lg-inline-block">
                     shyamtechnologieshyd@gmail.com
                   </span>
@@ -278,7 +287,6 @@ const Navbar = () => {
               to="/"
               alt="Logo"
               id="logo"
-              // src={isSticky ? stickyLogo : defaultLogo}
               src={getLogo()}
               style={{ width: `70px`, height: `48px` }}
             />
@@ -303,7 +311,6 @@ const Navbar = () => {
                     }
                     style={{
                       color: textColor,
-                      // transition: "color 0.3s ease-in-out",
                     }}
                   >
                     {item}
@@ -329,13 +336,18 @@ const Navbar = () => {
           <Link
             href="#"
             className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-            data-toggle="collapse"
-            data-target="#main-navbar"
+            onClick={toggleMobileMenu}
           >
             <span></span>
           </Link>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <MobileMenu isOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} />
+      )}
+
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -356,6 +368,7 @@ const Navbar = () => {
                 />
               </div>
 
+              <div></div>
               <div>
                 <label htmlFor="email">Email:</label>
                 <input
@@ -436,9 +449,6 @@ const Navbar = () => {
             font-size: 24px;
             cursor: pointer;
           }
-          // .close-btn:hover {
-          //   color: green;
-          // }
           form div {
             margin-bottom: 15px;
           }

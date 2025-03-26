@@ -78,7 +78,8 @@ const ContactMapSection = () => {
             >
               <div className="contact-info">
                 <div className="address mt-4">
-                  <i className="icon-room"></i>
+                  <i class="bi bi-geo-alt"></i>
+
                   <h4 className="mb-2">Location:</h4>
                   <p>
                     Flat no 214, 2nd Floor, Annapurna Block, Aditya Enclave,
@@ -87,7 +88,7 @@ const ContactMapSection = () => {
                 </div>
 
                 <div className="open-hours mt-4">
-                  <i className="icon-clock-o"></i>
+                  <i class="bi bi-clock"></i>
                   <h4 className="mb-2">Open Hours:</h4>
                   <p>
                     Sunday-Friday:
@@ -97,16 +98,16 @@ const ContactMapSection = () => {
                 </div>
 
                 <div className="email mt-4">
-                  <i className="icon-envelope"></i>
+                  <i class="bi bi-envelope"></i>
                   <h4 className="mb-2">Email:</h4>
                   <p>shyamtechnologieshyd@gmail.com</p>
                 </div>
 
                 <div className="phone mt-4">
-                  <i className="icon-phone"></i>
+                  <i class="bi bi-telephone"></i>
                   <h4 className="mb-2">Call:</h4>
                   <p>9346593339</p>
-                  <p>8142652799</p>
+                  <p>8978493733</p>
                 </div>
               </div>
             </div>
@@ -168,9 +169,8 @@ const ContactMapSection = () => {
             >
               <iframe
                 title="shyamMap"
+                className="mapStyles"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.482498418729!2d78.44490909999999!3d17.436605599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91649637696b%3A0xd39ef5ef9a40fa80!2sShyam%20Technologies!5e0!3m2!1sen!2sin!4v1736447469454!5m2!1sen!2sin"
-                width="350"
-                height="350"
                 style={{ border: "0" }}
                 allowFullScreen=""
                 loading="lazy"

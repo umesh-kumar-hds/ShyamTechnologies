@@ -1,52 +1,75 @@
-import React from "react";
+import React, { memo } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
-const AboutUsSection = () => {
+const AboutUsSection = memo(() => {
   return (
-    <div>
-      <div className="untree_co-section " id="about-section">
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-lg-5 mb-5">
-              <h2
-                className="line-bottom mb-4"
-                data-aos="fade-up"
-                data-aos-delay="0"
-              >
-                About Us
-              </h2>
-              <p data-aos="fade-up" data-aos-delay="100">
-                Preparing and Training the individuals in emerging technologies
-                for their GLOBAL TECH - CAREERS
-                <br />
-                Shyam Technologies is an edTech organization with a motive to
-                train the students as well as corporates in academia as well as
-                in industry in 360 degree approach. Our outcome-based
-                experiential learning programs on emerging technologies like
-                Machine Learning, Data Science, Artificial Intelligence, Devops,
-                .Net, Python, R, Informatica, AWS are building skilled entry for
-                entry level engineers, and professionals who are aspiring to
-                learn new technologies for a change or a better Growth in their
-                career.
-              </p>
-            </div>
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-              <a
-                href="https://vimeo.com/342333493"
-                data-fancybox
-                className="video-wrap"
-              >
-                <img
-                  src="images/ammai.png"
-                  alt=""
-                  className="img-fluid rounded"
-                />
-              </a>
-            </div>
+    <section className="untree_co-section" id="about-section">
+      {/* SEO Optimization */}
+      <Helmet>
+        <title>
+          Preparing and Training Individuals in Emerging Technologies for GLOBAL
+          TECH CAREERS
+        </title>
+        <meta
+          name="description"
+          content="Shyam Technologies trains students & professionals in AI, Machine Learning, Data Science, DevOps, AWS, and more for global tech careers."
+        />
+        <meta
+          name="keywords"
+          content="AI, Machine Learning, Data Science, DevOps, AWS, Python, Tech Careers"
+        />
+        <link rel="preload" as="image" href="images/ammai.png" />
+      </Helmet>
+
+      <div className="container">
+        <div className="row justify-content-between">
+          {/* Left Content */}
+          <div className="col-lg-5 mb-5">
+            <h2 className="line-bottom mb-4" data-aos="fade-up">
+              About Shyam Technologies
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+              Preparing and training individuals in emerging technologies for
+              their GLOBAL TECH CAREERS.
+            </p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              Shyam Technologies is a leading EdTech organization focused on
+              equipping students and professionals with industry-ready skills.
+              Our outcome-based experiential learning covers technologies such
+              as Machine Learning, Data Science, AI, DevOps, .Net, Python, AWS,
+              and more.
+            </p>
+            <p data-aos="fade-up" data-aos-delay="300">
+              Our programs help entry-level engineers and professionals
+              transition into new roles and technologies for career growth.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div
+            className="col-lg-6 text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <Link
+              to="#"
+              aria-label="Watch our video to learn more about Shyam Technologies"
+            >
+              <img
+                src="images/ammai.png"
+                alt="Shyam Technologies Video Introduction"
+                className="img-fluid rounded"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
+});
 
 export default AboutUsSection;

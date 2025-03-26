@@ -13,8 +13,42 @@ body {
 .carousel-fade .carousel-item {
   opacity: 0;
   transition: opacity 0.8s ease-in-out !important;
+  -webkit-transition: opacity 0.8s ease-in-out !important;
+  -moz-transition: opacity 0.8s ease-in-out !important;
+  -ms-transition: opacity 0.8s ease-in-out !important;
+  -o-transition: opacity 0.8s ease-in-out !important;
 }
 
 .carousel-fade .carousel-item.active {
   opacity: 1;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column for mobile */
+  gap: 1.5rem; /* Equivalent to gap-6 in Tailwind */
+}
+
+/* Tablet (sm) */
+@media (min-width: 640px) {
+  /* Tailwind 'sm' breakpoint */
+  .responsive-grid {
+    grid-template-columns: 1fr; /* Still single column */
+  }
+}
+
+/* Desktop (md and above) */
+@media (min-width: 768px) {
+  /* Tailwind 'md' breakpoint */
+  .responsive-grid {
+    display: flex; /* Apply flex only on desktop */
+    flex-direction: row; /* Row layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 1.5rem;
+  }
+}
+.site-mobile-menu-body ul {
+  list-style: none;
+  padding: 20px;
+  display: block !important; /* Ensure the links are visible */
 }

@@ -3,12 +3,12 @@ import MobileMenu from "../../Components/MobileMenu";
 import Navbar from "../../Components/NavComponent";
 import PageContent from "../../Components/PageContent";
 import FooterSection from "../../Components/FooterSection";
-import LoadingComponent from "../../Components/LoadingComponent";
+// import LoadingComponent from "../../Components/LoadingComponent";
 
 const TableauCourse = ({ prop }) => {
   return (
     <div>
-      <MobileMenu />
+      {/* <MobileMenu /> */}
       <Navbar />
       <PageContent prop={prop} />
       <FooterSection />

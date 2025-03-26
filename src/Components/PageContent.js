@@ -148,7 +148,6 @@ const PageContent = ({ prop }) => {
 
   return (
     <div>
-      <hr></hr>
       <div style={{ marginTop: "105px" }}>
         <div className="services-section" style={{ padding: "40px 0" }}>
           <div className="twoButtons">
